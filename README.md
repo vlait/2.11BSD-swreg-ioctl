@@ -1,15 +1,22 @@
 # 2.11BSD-swreg-ioctl
-display/swreg access testing for pidp11
+display/swreg access methods testing for pidp11
+This repo resulted from my need to extend esppdp 
+( https://github.com/Spritetm/esppdp ) to allow it to interact with the physical world easier.
+CSW just happened to be the simplest "accessory" available that has no built-in access on 2.11BSD
+Initial idea was to keep all kernel-related additions as light as possible, remains to be seen what the final result would look like.
 
-Massive thanks to Johnny Billquist for advice and general guidance.
+
+*Massive thanks to Johnny Billquist for advice and general guidance on kernel internals*
 
 
 Apologies for the mindflow comments, wanted to get something out before dec rush.. 
 do not trust anything you read or anything you see on the disk image.
 
 source diffs for all 3 inside the disk image, will upload when i can.
+** tar files contain the patches and examples if you want to test just one approach.
 
-disk image suitable for pidp11 added.. 2.11BSD pl482 based on Chase Covello's prepatched 481 ( https://github.com/chasecovello/211bsd-pidp11 )
+disk image suitable for pidp11 added.. 2.11BSD pl482 based on Chase Covello's prepatched 481 
+( https://github.com/chasecovello/211bsd-pidp11 )
 please make sure you back up your own image before copying this in.
 
 included are 
