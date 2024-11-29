@@ -13,6 +13,9 @@ remains to be seen what the final result would look like.
 Apologies for the mindflow comments, wanted to get something out before dec rush.. 
 do not trust anything you read or anything you see on the disk image.
 
+None of these are meant to be suggestions for 2.11BSD additions but 
+PiDP11 users might find them ... useful .. or something :)
+
 source diffs for all 3 inside the disk image, will upload when i can.
 ** tar files contain the patches and examples if you want to test just one approach.
 
