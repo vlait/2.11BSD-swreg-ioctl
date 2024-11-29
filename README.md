@@ -16,10 +16,9 @@ do not trust anything you read or anything you see on the disk image.
 None of these are meant to be suggestions for 2.11BSD additions but 
 PiDP11 users might find them ... useful .. or something :)
 
-source diffs for all 3 inside the disk image, will upload when i can.
-** tar files contain the patches and examples if you want to test just one approach.
+The tar files contain the patches and examples if you want to test just one approach.
 
-disk image suitable for pidp11 added.. 2.11BSD pl482 based on Chase Covello's prepatched 481 
+disk image suitable for pidp11 2.11BSD pl482 based on Chase Covello's prepatched 481 
 ( https://github.com/chasecovello/211bsd-pidp11 )
 please make sure you back up your own image before copying this in.
 
