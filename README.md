@@ -62,7 +62,21 @@ included are
    an ioctl call definition in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
    
    see iotcl-mem for examples
+   
+   ioctl read:
+   ```
+   unsigned int data;
+	int fd;
+	int error;
 
+	fd = open(PANEL,O_RDWR,0);
+	if(fd < 0) { 
+		printf("error opening %s\n",PANEL);
+		exit(1);
+	}
+	error = ioctl(fd,MIOCGCSW,(char *)&data);
+   ```
+   
 
 
 Simh as in the PiDPD11 apparently does not handle the CSW register byte-wide access correctly, which caused some headache as i did not
