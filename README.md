@@ -36,6 +36,7 @@ included are
    int a=getsw()
    
    to set DR :
+   
    extern unsigned int setdr(unsigned int );
    ...
    unsigned int meh = 1212; setdr(meh)
