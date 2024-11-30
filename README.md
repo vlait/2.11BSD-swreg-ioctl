@@ -1,10 +1,10 @@
 # 2.11BSD-swreg-ioctl
-display/swreg access methods testing for pidp11
-This repo resulted from my need to extend esppdp 
-( https://github.com/Spritetm/esppdp ) to allow it to interact with the physical world easier.
+display/swreg access methods testing for pidp11  
+This repo resulted from my need to extend esppdp   
+( https://github.com/Spritetm/esppdp ) to allow it to interact with the physical world easier.  
 CSW just happened to be the simplest "accessory" available that has no built-in access on 2.11BSD
 
-Initial idea was to keep all kernel-related additions as light as possible,
+Initial idea was to keep all kernel-related additions as light as possible,  
 remains to be seen what the final result would look like.
 
 
