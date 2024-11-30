@@ -32,6 +32,7 @@ included are
 2. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
    sysctl hw.csw
+   
    sysctl is (or at least i thought it was) meant to allow easier userland access to kernel tunables/data/memory.
    
 4. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl.
