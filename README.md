@@ -30,6 +30,7 @@ included are
    patch (re)introduces 2 new syscalls 'getsw'/'setdr' for for CSW access
 
    to read CSW : int a=getsw()
+   
    to set DR : unsigned int meh = 1212; setdr(meh)
 
 3. switch/dr access via sysctl - see /home/sysctl
