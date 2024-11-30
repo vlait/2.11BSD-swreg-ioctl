@@ -46,7 +46,7 @@ included are
    simh-classic-current already does have a fix(several) submitted by JohnnyB to fix that
    , adding a copy here if needed
    
-   disk image is compiled with #define SIMH_BORK YES (in /usr/src/sys/pdp/mem.c) until (pidp11)simh has the csw fix included.
+   A disk image is compiled with #define SIMH_BORK YES (in /usr/src/sys/pdp/mem.c) until (pidp11)simh has the csw fix included.
    For now writes/reads are not safe if the CSW is not present and will likely cause a kernel panic.
 
    ... will be fixed if someone gets around to groom pidp11 simh source from teens to adulthood :)
