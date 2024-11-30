@@ -22,13 +22,13 @@ device major 1 minor 4 exposes the memory at the CSW address only (at least hope
                 default:
                         return(EINVAL);
 ```
-uiomove is used to copy user data in/out of the kernel space , and it also has fault trapping so that trying to address 
+uiomove is the general kernel helper used to copy user data in/out of the kernel space , it also has fault trapping so that trying to access 
 the CSW on a system where it does not exist will not cause a kernel panic.
 
 /dev/panel is as much as /dev/mem a "real" file, it is best to be dealt with open/read/write/close rather than the higher 
 level file counterparts.
 
-for example to set an address to the dr
+for example to set a value to the dr
 ```
 main(void)
 {
