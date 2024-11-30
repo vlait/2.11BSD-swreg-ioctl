@@ -42,6 +42,7 @@ included are
    see /home/iotcl-mem for examples
    Simh as in the PiDPD11 apparently does not handle the CSW register byte-wide access correctly, which caused some headache as i did not
    want to introduce more assembly subroutines in the kernel that are only used once.
+   
    simh-classic-current already does have a fix(several) submitted by JohnnyB to fix that
    , adding a copy here if needed
    
