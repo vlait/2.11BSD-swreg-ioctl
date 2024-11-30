@@ -31,15 +31,15 @@ included are
 
    to read CSW :
    
-   extern unsigned int getsw();
-   ...
-   int a=getsw()
+   extern unsigned int getsw();  
+   ...  
+   int a=getsw()  
    
-   to set DR :
+   to set DR :  
    
    extern unsigned int setdr(unsigned int );
-   ...
-   unsigned int meh = 1212; setdr(meh)
+   ...  
+   unsigned int meh = 1212; setdr(meh)  
 
 3. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
