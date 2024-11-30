@@ -58,8 +58,8 @@ included are
    
    
 5. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl.  
-   This is only an extension for the "mem" driver so it is a really simple one as it does not require much more than adding  
-   an ioctl call in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
+   This is only an extension for the "mem" driver so does not require much more than adding  
+   an ioctl call definition in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
    
    see iotcl-mem for examples
 
