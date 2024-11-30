@@ -65,6 +65,8 @@ included are
    
    ioctl read:
    ```
+   #define MEM     "/dev/panel"
+   ...
    unsigned int data;
 	int fd;
 	int error;
@@ -76,7 +78,22 @@ included are
 	}
 	error = ioctl(fd,MIOCGCSW,(char *)&data);
    ```
-   
+   ioctl write:
+```
+#define MEM     "/dev/panel"
+...
+        int fd;
+        unsigned int lr=1212;
+        int i;
+
+        fd = open( MEM, O_RDWR, 0 );
+        if ( fd < 0 ) {
+            printf("Open failed. %d\n", errno );
+            return 1;
+        }
+
+	i = write( fd, &lr, 2);
+```
 
 
 Simh as in the PiDPD11 apparently does not handle the CSW register byte-wide access correctly, which caused some headache as i did not
