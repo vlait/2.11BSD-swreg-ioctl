@@ -61,7 +61,10 @@ included are
    This is only an extension for the "mem" driver so it is a really simple one as it does not require much more than adding  
    an ioctl call in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
    
-   see /home/iotcl-mem for examples  
+   see iotcl-mem for examples
+
+
+
    Simh as in the PiDPD11 apparently does not handle the CSW register byte-wide access correctly, which caused some headache as i did not
    want to introduce more assembly subroutines in the kernel that are only used once.
    
