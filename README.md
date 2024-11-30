@@ -43,16 +43,17 @@ included are
    ```
 3. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw  
-   This is RW for uid0 - RO for others - would be trivial to allow regular user write access.  
+   This is RW for uid0 - RO for others - would be trivial to allow regular user write access.
+   to read CSW :
    ```
    sysctl hw.csw 
    ```
-   to read CSW, and
+   and
+   to set DR value :  
    ```
    sysctl -w hw.csw=1212
    ```
-   to set DR value
-   
+     
    sysctl is (or at least i thought it was) meant to allow easier userland access to kernel tunables/data/memory.
    
    
