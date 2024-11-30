@@ -27,9 +27,12 @@ included are
 1. switch/dr access via syscalls - see /home/syscall
    - syscall code was posted by DigbyT on the pidp11 mailing list some years ago, this
    just adds them into libc for easier access. (see examples, definitions not added to include files .. yet-- maybe)
-   read - int a=getsw() , write - setdr(unsigned int meh)
+   patch (re)introduces 2 new syscalls 'getsw'/'setdr' for for CSW access
 
-2. switch/dr access via sysctl - see /home/sysctl
+   to read CSW : int a=getsw()
+   to set DR : unsigned int meh = 1212; setdr(meh)
+
+3. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
    sysctl hw.csw
    
