@@ -29,9 +29,16 @@ included are
    just adds them into libc for easier access. (see examples, definitions not added to include files .. yet-- maybe)
    patch (re)introduces 2 new syscalls 'getsw'/'setdr' for for CSW access
 
-   to read CSW : int a=getsw()
+   to read CSW :
    
-   to set DR : unsigned int meh = 1212; setdr(meh)
+   extern unsigned int getsw();
+   ...
+   int a=getsw()
+   
+   to set DR :
+   extern unsigned int setdr(unsigned int );
+   ...
+   unsigned int meh = 1212; setdr(meh)
 
 3. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
