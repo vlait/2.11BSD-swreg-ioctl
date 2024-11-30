@@ -42,12 +42,21 @@ included are
    unsigned int meh = 1212; setdr(meh)  
    ```
 3. switch/dr access via sysctl - see /home/sysctl
-   new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
-   sysctl hw.csw
+   new variable hw.csw  
+   This is RW for uid0 - RO for others - would be trivial to allow regular user write access.  
+   ```
+   sysctl hw.csw 
+   ```
+   to read CSW, and
+   ```
+   sysctl -w hw.csw=1212
+   ```
+   to set DR value
    
    sysctl is (or at least i thought it was) meant to allow easier userland access to kernel tunables/data/memory.
    
-4. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl.
+   
+5. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl.
    This is only an extension for the "mem" driver so it is a really simple one as it does not require much more than adding
    an ioctl call in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
    
