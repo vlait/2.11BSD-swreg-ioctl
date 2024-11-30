@@ -100,7 +100,8 @@ Johnny Billquist submitted a patch for simh that is already committed to the ori
 it might take some time to get the patch to appear on v4/opensimh.
 
 
-ioctl access is really not much different from file access in this case.
+ioctl access is really not much different from file access in this case.  
+for example to read the sw register:  
 
 ```
 #include<stdio.h>
@@ -129,6 +130,7 @@ main(int argc, char *argv[]) {
                 printf("error opening %s\n",PANEL);
                 exit(1);
         }
+        /*read value from CSW*/
         error = ioctl(fd,MIOCGCSW,(char *)&data);
         if (error) {
                 printf("ioctl error %d\n",error);
