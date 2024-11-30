@@ -25,22 +25,27 @@ please make sure you back up your own image before copying this in.
 
 included are 
 1. switch/dr access via syscalls - see /home/syscall
-   - syscall code was posted by DigbyT on the pidp11 mailing list some years go, this
+   - syscall code was posted by DigbyT on the pidp11 mailing list some years ago, this
    just adds them into libc for easier access. (see examples, definitions not added to include files .. yet-- maybe)
-   int a=getsw()  setdr(unsigned int meh)
+   read - int a=getsw() , write - setdr(unsigned int meh)
 
 2. switch/dr access via sysctl - see /home/sysctl
    new variable hw.csw, rw for uid0- ro for others - would be trivial to allow regular user write access.
    sysctl hw.csw
+   sysctl is (or at least i thought it was) meant to allow easier userland access to kernel tunables/data/memory.
    
-4. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl. /home/iotcl for examples
+4. new device /dev/panel (c 1 4) that is really only one word address/register , access either via regular fd or ioctl.
+   This is only an extension for the "mem" driver so it is a really simple one as it does not require much more than adding
+   an ioctl call in /usr/src/sys/pdp/conf.c for the mem driver + some additional code for the minor 4 device access and the ioctl.
+   
+   see /home/iotcl-mem for examples
    Simh as in the PiDPD11 apparently does not handle the CSW register byte-wide access correctly, which caused some headache as i did not
-   want to introduce more subroutines that are only used once.
+   want to introduce more assembly subroutines in the kernel that are only used once.
    simh-classic-current already does have a fix(several) submitted by JohnnyB to fix that
    , adding a copy here if needed
    
    disk image is compiled with #define SIMH_BORK YES (in /usr/src/sys/pdp/mem.c) until (pidp11)simh has the csw fix included.
-    For now writes/reads are not safe if the CSW is not present and will likely cause a kernel panic.
+   For now writes/reads are not safe if the CSW is not present and will likely cause a kernel panic.
 
    ... will be fixed if someone gets around to groom pidp11 simh source from teens to adulthood :)
 
