@@ -37,7 +37,7 @@ included are
    
    to set DR :  
    
-   extern unsigned int setdr(unsigned int );
+   extern unsigned int setdr(unsigned int );  
    ...  
    unsigned int meh = 1212; setdr(meh)  
 
