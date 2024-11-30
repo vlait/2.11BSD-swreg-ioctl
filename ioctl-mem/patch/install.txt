@@ -1,0 +1,26 @@
+ patch to add a switch register accessible for users
+
+**note**
+The official PiDP11 simh will not handle byte-sized access to CSW correctly, 
+Johnny Billquist generously submitted a patch to simh but that is so far 
+only available on simh-classic-current.
+
+
+
+to install 
+
+copy the patch file to /tmp
+
+patch -p0 < /tmp/patch
+
+rebuild the pidp11 kernel 
+
+cd /usr/src/sys/PIDP11
+make && make install
+
+.. reboot
+
+create the new panel device
+mknod c 1 4 /dev/panel
+
+some examples included in the tar file
