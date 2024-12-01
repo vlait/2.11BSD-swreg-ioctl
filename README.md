@@ -2,14 +2,18 @@
 display/swreg access methods testing for pidp11  
 This repo resulted from my need to extend esppdp   
 ( https://github.com/Spritetm/esppdp ) to allow it to interact with the physical world easier.  
+experiments below have nothing to do with the esppdp yet , still trying to figure out how 
+to interact with BLE and the 240x240 display on board the one i'm using...  
+a block device with dma maybe the way to go for bitmapped display... 
+and perhaps a character device for same to allow hardware accelerated functions..  
+
+... anyway , back to this ... 
 CSW just happened to be the simplest "accessory" available that has no built-in access on 2.11BSD
 
 Initial idea was to keep all kernel-related additions as light as possible,  
 remains to be seen what the final result would look like.
 
-
 *Massive thanks to Johnny Billquist for advice and general guidance on kernel internals*
-
 
 Apologies for the mindflow comments, wanted to get something out before dec rush.. 
 do not trust anything you read or anything you see on the disk image.
