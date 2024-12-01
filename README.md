@@ -4,6 +4,8 @@ This repo resulted from my need to extend esppdp
 ( https://github.com/Spritetm/esppdp ) to allow it to interact with the physical world easier.  
 experiments below have nothing to do with the esppdp yet , still trying to figure out how 
 to interact with BLE and the 240x240 display on board the one i'm using...  
+decided not to use the display as console as i'm way past the age i could make out the 4x8 text on a 3x3cm display.  
+
 a block device with dma maybe the way to go for bitmapped display...  
 and perhaps a character device for same to allow hardware accelerated functions..  
 
