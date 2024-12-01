@@ -12,11 +12,7 @@ device major 1 minor 4 exposes the memory at the CSW address only (at least hope
                         break;
 /* minor device 4 is the DISPLAY/SWITCH register */
                 case 4:
-                /*pidp11 simh will not allow byte sized access to CSW
-                 *this only to hopefully safely limit the access to reg addr
-                 *a patch submitted by grandmaster JohnnyB is available in
-                 *simh-classic current to fix this.. for now however- this
-                */
+                    /* fixed address for now, pidp11 simh will not allow byte access to CSW */
                         error = uiomove(CSW,iov->iov_len>=2?2:iov->iov_len,uio);
                         break;
                 default:
