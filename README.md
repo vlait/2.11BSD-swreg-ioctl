@@ -9,7 +9,7 @@ decided not to use the display as console as i'm way past the age i could read t
 a block device with dma maybe the way to go for bitmapped display...  
 and perhaps a character device for same to allow hardware accelerated functions..  
 
-... anyway , back to this ... 
+... anyway , back to this study  
 CSW just happened to be the simplest "accessory" available that has no built-in access on 2.11BSD
 
 Initial idea was to keep all kernel-related additions as light as possible,  
